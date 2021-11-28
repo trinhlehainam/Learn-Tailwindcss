@@ -3,7 +3,7 @@ import {motion} from 'framer-motion'
 
 type Props = {
     animateParams: {
-            rotate: string,
+            rotate: number,
             x: [number, number, number],
             y: [number, number, number],
     },
@@ -12,8 +12,10 @@ type Props = {
 
 const Triangle: React.FC<Props> = ({animateParams, className}) => (
     <motion.div
-        initial={false}
-        animate={animateParams}
+        initial={{x: 0, y: 0, rotate: animateParams.rotate}}
+        animate={{
+            ...animateParams
+        }}
         transition={{
             loop: Infinity,
             ease: "easeIn",
