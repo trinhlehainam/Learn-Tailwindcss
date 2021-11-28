@@ -15,6 +15,7 @@ const ItemGrid: React.FC<Props> = ({items}) => {
                     icon={item.icon}
                     name={item.name}
                     value={item.value}
+                    index={index}
                 />
             ))};
         </div>
