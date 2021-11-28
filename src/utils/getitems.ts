@@ -14,7 +14,7 @@ const emptyItem: ItemType = {
 };
 
 const getItems = (
-    category = ItemsMainCategoriesType.WEAPONS,
+    category = ItemsMainCategoriesType.SKILLS,
     itemsPerPage = 30
 ): ItemType[] => {
     const itemGrids = items[category].concat(

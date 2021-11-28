@@ -2,7 +2,7 @@ import { ItemCategoriesType } from "./items.type";
 
 export default {
   weapons: [
-    {
+    /* {
       name: "Tree Branch",
       category: ItemCategoriesType.WEAPON,
       icon: process.env.PUBLIC_URL + "items/weapons/BotW_Tree_Branch_Icon.png",
@@ -68,11 +68,43 @@ export default {
       value: "52",
       description:
         "A two-handed sword issued to the Hyrulean royal family's immediate guard detail. Its powerful strikes are said to crush an opponent's body and resolve alike.",
+    }, */
+    {
+      name: "Arrow",
+      category: ItemCategoriesType.WEAPON,
+      icon: process.env.PUBLIC_URL + "items/weapons/Arrow.png",
+      value: "30",
+      description:
+        "The Legendary sword that seals the darkness. Its blade gleams with a sacred luster that can oppose the Calamity. Only a hero chosen by the sword itself may wield it.",
     },
     {
-      name: "Master Sword",
+      name: "Axe",
       category: ItemCategoriesType.WEAPON,
-      icon: process.env.PUBLIC_URL + "items/weapons/BotW_Master_Sword_Icon.png",
+      icon: process.env.PUBLIC_URL + "items/weapons/Axe.png",
+      value: "30",
+      description:
+        "The Legendary sword that seals the darkness. Its blade gleams with a sacred luster that can oppose the Calamity. Only a hero chosen by the sword itself may wield it.",
+    },
+    {
+      name: "Bow",
+      category: ItemCategoriesType.WEAPON,
+      icon: process.env.PUBLIC_URL + "items/weapons/Bow.png",
+      value: "30",
+      description:
+        "The Legendary sword that seals the darkness. Its blade gleams with a sacred luster that can oppose the Calamity. Only a hero chosen by the sword itself may wield it.",
+    },
+    {
+      name: "Emerald Staff",
+      category: ItemCategoriesType.WEAPON,
+      icon: process.env.PUBLIC_URL + "items/weapons/Emerald Staff.png",
+      value: "30",
+      description:
+        "The Legendary sword that seals the darkness. Its blade gleams with a sacred luster that can oppose the Calamity. Only a hero chosen by the sword itself may wield it.",
+    },
+    {
+      name: "Hammer",
+      category: ItemCategoriesType.WEAPON,
+      icon: process.env.PUBLIC_URL + "items/weapons/Hammer.png",
       value: "30",
       description:
         "The Legendary sword that seals the darkness. Its blade gleams with a sacred luster that can oppose the Calamity. Only a hero chosen by the sword itself may wield it.",
@@ -241,4 +273,72 @@ export default {
         "Traditional dress trousers of Hyrule. The plush fabric makes these trousers quite comfortable, and their high durability makes them ideal for travelers.",
     },
   ],
+  skills: [
+    {
+      name: "Slash",
+      category: ItemCategoriesType.GREAVE,
+      isNew: true,
+      icon:
+        process.env.PUBLIC_URL + "items/skills/skill_icon_00.png",
+      value: "3",
+      bonus: "normal",
+      description:
+        "Traditional dress trousers of Hyrule. The plush fabric makes these trousers quite comfortable, and their high durability makes them ideal for travelers.",
+    },
+    {
+      name: "Shield Up",
+      category: ItemCategoriesType.GREAVE,
+      isNew: true,
+      icon:
+        process.env.PUBLIC_URL + "items/skills/skill_icon_01.png",
+      value: "3",
+      bonus: "normal",
+      description:
+        "Traditional dress trousers of Hyrule. The plush fabric makes these trousers quite comfortable, and their high durability makes them ideal for travelers.",
+    },
+    {
+      name: "Streng up",
+      category: ItemCategoriesType.GREAVE,
+      isNew: true,
+      icon:
+        process.env.PUBLIC_URL + "items/skills/skill_icon_02.png",
+      value: "3",
+      bonus: "normal",
+      description:
+        "Traditional dress trousers of Hyrule. The plush fabric makes these trousers quite comfortable, and their high durability makes them ideal for travelers.",
+    },
+    {
+      name: "Fire",
+      category: ItemCategoriesType.GREAVE,
+      isNew: true,
+      icon:
+        process.env.PUBLIC_URL + "items/skills/skill_icon_06.png",
+      value: "3",
+      bonus: "normal",
+      description:
+        "Traditional dress trousers of Hyrule. The plush fabric makes these trousers quite comfortable, and their high durability makes them ideal for travelers.",
+    },
+    {
+      name: "Ice",
+      category: ItemCategoriesType.GREAVE,
+      isNew: true,
+      icon:
+        process.env.PUBLIC_URL + "items/skills/skill_icon_11.png",
+      value: "3",
+      bonus: "normal",
+      description:
+        "Traditional dress trousers of Hyrule. The plush fabric makes these trousers quite comfortable, and their high durability makes them ideal for travelers.",
+    },
+    {
+      name: "Toxic",
+      category: ItemCategoriesType.GREAVE,
+      isNew: true,
+      icon:
+        process.env.PUBLIC_URL + "items/skills/skill_icon_16.png",
+      value: "3",
+      bonus: "normal",
+      description:
+        "Traditional dress trousers of Hyrule. The plush fabric makes these trousers quite comfortable, and their high durability makes them ideal for travelers.",
+    },
+  ]
 };

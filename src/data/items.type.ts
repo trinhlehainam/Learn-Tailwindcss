@@ -2,6 +2,7 @@ export enum ItemsMainCategoriesType {
   WEAPONS = "weapons",
   SHIELDS = "shields",
   ARMORS = "armors",
+  SKILLS = "skills"
 }
 
 export enum ItemCategoriesType {
