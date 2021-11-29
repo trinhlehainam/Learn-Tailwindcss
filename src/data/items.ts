@@ -1,7 +1,7 @@
-import { ItemCategoriesType } from "./items.type";
+import { ItemCategoriesType, ItemsMainCategoriesType } from "./items.type";
 
 export default {
-  weapons: [
+    [ItemsMainCategoriesType.WEAPONS]: [
     /* {
       name: "Tree Branch",
       category: ItemCategoriesType.WEAPON,
@@ -110,7 +110,7 @@ export default {
         "The Legendary sword that seals the darkness. Its blade gleams with a sacred luster that can oppose the Calamity. Only a hero chosen by the sword itself may wield it.",
     },
   ],
-  shields: [
+  [ItemsMainCategoriesType.SHIELDS]: [
     {
       name: "Wooden Shield",
       category: ItemCategoriesType.SHIELD,
@@ -150,7 +150,7 @@ export default {
         "This shield was made using ancient Sheikah technology. Its surface glows blue when raised in defense. Enhanced functionality allows it to deflect Guardian beams.",
     },
   ],
-  armors: [
+  [ItemsMainCategoriesType.ARMORS]: [
     {
       name: "Zora Helm",
       category: ItemCategoriesType.HELM,
@@ -273,7 +273,7 @@ export default {
         "Traditional dress trousers of Hyrule. The plush fabric makes these trousers quite comfortable, and their high durability makes them ideal for travelers.",
     },
   ],
-  skills: [
+  [ItemsMainCategoriesType.SKILLS]: [
     {
       name: "Slash",
       category: ItemCategoriesType.GREAVE,

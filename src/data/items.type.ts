@@ -11,6 +11,7 @@ export enum ItemCategoriesType {
   ARMOR = "armor",
   GREAVE = "greave",
   HELM = "helm",
+  NONE = "none"
 }
 
 export type ItemType = {
@@ -23,8 +24,8 @@ export type ItemType = {
   isNew?: boolean;
 };
 
-type ItemsType = {
-  [key: string]: ItemType[];
+export type ItemsPage = {
+  items: ItemType[];
+  category: ItemsMainCategoriesType,
+  page: number
 };
-
-export default ItemsType;
