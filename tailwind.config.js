@@ -18,7 +18,7 @@ module.exports = {
                 yellow: "rgba(255, 255, 190, 0.4) 0px 0px 6px 2px",
             },
             dropShadow: {
-                arrow: "0px 0px 100px rgba(255, 255, 255, 0.6)"
+                arrow: "0 0 64px #fff, 0 0 66px #fff, 0 0 68px #fff, 0 0 70px #fff, 0 0 72px #fff"
             },
         },
     },

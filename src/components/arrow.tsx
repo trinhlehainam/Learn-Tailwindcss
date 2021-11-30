@@ -1,6 +1,5 @@
 import React from 'react'
 import cx from 'classnames'
-import { motion } from 'framer-motion';
 
 import SetPage_t from '../type/setpage'
 
@@ -34,22 +33,14 @@ const NavigationArrow: React.FC<Props> = ({currentPage, direction, setPage, maxP
             { "left-0" : isLeft, "right-0": !isLeft},
             "absolute h-full hidden md:flex items-center z-30"
         )}>
-            <motion.img
-                initial={{rotate: isLeft? -180: 0,}}
-                animate={{
-                    scale: isDisable ? [1,1,1] : [1, 1.2, 1],
-                }}
-                transition={{
-                    loop: Infinity,
-                    ease: "easeIn",
-                    duration: 1
-                }}
+            <img
+                className = {cx({
+                    "opacity-50": isDisable,
+                    "hover:scale-150 cursor-pointer": !isDisable,
+                    "rotate-180": isLeft,
+                }, "h-16 transform")}
                 onClick={handleDirection}
                 src="icons/arrow-no-curve.png"
-                className={cx({
-                    "opacity-50": isDisable,
-                    "cursor-pointer": !isDisable,
-                }, "h-16")}
             />
         </div>
     );
