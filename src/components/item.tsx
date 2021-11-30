@@ -1,7 +1,9 @@
 import React from 'react'
-import ItemsConext from '../context/itemcontext'
 import cx from 'classnames'
+
+import ItemsConext from '../context/itemcontext'
 import TriangleBox from './trianglebox'
+import ModalItem from './modalitem';
 
 type Props = {
     name: string,
@@ -11,10 +13,16 @@ type Props = {
 };
 
 const Item: React.FC<Props> = ({name, icon, value, index}) => {
-    const { itemSelected, setItemSelected } = React.useContext(ItemsConext);
+    const { 
+        itemSelected, 
+        setItemSelected,
+        toggleModal,
+        isModelOpened,
+    } = React.useContext(ItemsConext);
 
     const handleClick = () => {
         setItemSelected && setItemSelected(index);
+        toggleModal && toggleModal(!isModelOpened);
     }
 
     const isSelected = itemSelected === index;
@@ -36,6 +44,7 @@ const Item: React.FC<Props> = ({name, icon, value, index}) => {
             {value}
             </div>)
         }
+        {isModelOpened && isSelected && <ModalItem />}
     </div>
     );
 };

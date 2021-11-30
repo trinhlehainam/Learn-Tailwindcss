@@ -10,14 +10,18 @@ import { ArrowDirection, NavigationArrow } from "./components/arrow";
 import getItems from './utils/getitems'
 
 function App() {
-    const [itemSelected, setItemSelected] = React.useState(0);
-    const [[page, dir], setPage] = React.useState([0,0]);
-    const contextState = {
-        setItemSelected,
-        itemSelected
-    };
     const PAGES = getItems();
     const MAX_PAGE = PAGES.length - 1;
+    const [itemSelected, setItemSelected] = React.useState(0);
+    const [isModelOpened, toggleModal] = React.useState(false);
+    const [[page, dir], setPage] = React.useState([0,0]);
+
+    const contextState = {
+        setItemSelected,
+        itemSelected,
+        toggleModal,
+        isModelOpened,
+    };
 
     return (
         <div className="bg-zelda-darkGreen min-h-screen pt-32">
