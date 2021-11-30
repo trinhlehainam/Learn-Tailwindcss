@@ -5,8 +5,6 @@ module.exports = {
         extend: {
             colors: {
                 zelda: {
-                    bgBlackTransparent: "rgba(0, 0, 0, 0.5)",
-                    bgModal: "rgba(0, 0, 0, 0.85)",
                     blue: "#0290fe",
                     darkGreen: "#0c1f0c",
                     darkGray: "#2f3124",
@@ -14,6 +12,8 @@ module.exports = {
                     yellow: "#FFC800",
                     lightYellow: "#FFFFBE",
                     softYellow: "#f8f7d9",
+                    bgBlackTransparent: "rgba(0, 0, 0, 0.5)",
+                    bgModal: "rgba(0, 0, 0, 0.85)"
                 },
             },
             boxShadow: {
