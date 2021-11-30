@@ -17,10 +17,15 @@ module.exports = {
             boxShadow: {
                 yellow: "rgba(255, 255, 190, 0.4) 0px 0px 6px 2px",
             },
+            dropShadow: {
+                arrow: "0px 0px 100px rgba(255, 255, 255, 0.6)"
+            },
         },
     },
     variants: {
-        extend: {},
+        extend: {
+            dropShadow: ["hover", "focus"],
+        },
     },
     plugins: [],
 }
