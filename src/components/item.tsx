@@ -21,9 +21,9 @@ const Item: React.FC<Props> = ({name, icon, value, index}) => {
     } = React.useContext(ItemsConext);
 
     const handleClick = () => {
+        if(toggleModal)
+            !isSelected? toggleModal(false) : toggleModal(!isModelOpened);
         setItemSelected && setItemSelected(index);
-        toggleModal && toggleModal(!isModelOpened);
-        console.log('Model is toggled on item click !')
     }
 
     const isSelected = itemSelected === index;
