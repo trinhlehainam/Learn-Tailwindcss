@@ -18,9 +18,7 @@ const ModalItem = () => {
     return (
         <div 
         ref={ref}
-        className={
-            `border border-zelda-darkGray w-32 bg-black
-            absolute top-0 left-0 z-50 mx-6 my-6 outline-none text-white`}
+        className="border border-zelda-darkGray w-32 bg-zelda-bgModal absolute top-0 left-0 z-50 mx-6 my-6 outline-none text-white"   
         >
         <div
             className="flex flex-col p-4"
