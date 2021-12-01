@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./App.css";
 import "./styles/index.css";
 
@@ -15,18 +15,28 @@ function App() {
     const [itemSelected, setItemSelected] = React.useState(0);
     const [isModelOpened, toggleModal] = React.useState(false);
     const [[page, dir], setPage] = React.useState([0,0]);
+    const inventoryRef = useRef<HTMLDivElement>(null);
+
+    const closeModal = () => {
+        toggleModal(false);
+        if (inventoryRef.current)
+            inventoryRef.current.focus();
+    };
 
     const contextState = {
         setItemSelected,
         itemSelected,
         toggleModal,
         isModelOpened,
+        closeModal,
     };
+
+    useEffect(() => {if (inventoryRef.current) inventoryRef.current.focus()});
 
     return (
         <div className="bg-zelda-darkGreen min-h-screen pt-32">
             <div className="container mx-auto flex flex-col xl:flex-row">
-                <div className="relative flex flex-col justify-center w-full max-w-2xl mx-auto xl:w-1/2 xl:px-12">
+                <div ref={inventoryRef} className="relative flex flex-col justify-center w-full max-w-2xl mx-auto xl:w-1/2 xl:px-12">
                     <CategoryMenu
                         categorySelected = {PAGES[page].category}
                         setPage = {setPage}

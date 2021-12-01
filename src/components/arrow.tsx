@@ -41,6 +41,7 @@ const NavigationArrow: React.FC<Props> = ({currentPage, direction, setPage, maxP
                 }, "h-16 transform")}
                 onClick={handleDirection}
                 src="icons/arrow-no-curve.png"
+                alt="arrow"
             />
         </div>
     );

@@ -1,6 +1,8 @@
-import { useRef, useState} from 'react'
+import { useContext, useEffect, useRef, useState} from 'react'
 import cx from 'classnames'
 import TriangleBox from './trianglebox';
+import ItemsConext from '../context/itemcontext';
+import useClickOutside from '../utils/hooks/useClickOutside';
 
 enum SelectOption {
     EQUIP = 'select',
@@ -8,16 +10,23 @@ enum SelectOption {
     CANCEL = 'cancel'
 };
 
-const ModalItem = () => {
+const ItemModal = () => {
     const [selectOption, setOption] = useState(SelectOption.EQUIP);
+    const {closeModal} = useContext(ItemsConext);
     const ref = useRef<HTMLDivElement>(null);
+
     const handleSelectOption = (option: SelectOption) => {
         setOption(option); 
     }
 
+    useClickOutside(ref, closeModal);
+
+    useEffect(() => {if(ref.current) ref.current.focus()}, []);
+
     return (
         <div 
         ref={ref}
+        onClick={(e) => {e.stopPropagation()}}
         className="border border-zelda-darkGray w-32 bg-zelda-bgModal absolute top-0 left-0 z-50 mx-6 my-6 outline-none text-white"   
         >
         <div
@@ -64,4 +73,4 @@ const ModalItem = () => {
     )
 };
 
-export default ModalItem;
+export default ItemModal;

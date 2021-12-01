@@ -3,7 +3,7 @@ import cx from 'classnames'
 
 import ItemsConext from '../context/itemcontext'
 import TriangleBox from './trianglebox'
-import ModalItem from './modalitem';
+import ItemModal from './itemmodal';
 
 type Props = {
     name: string,
@@ -23,6 +23,7 @@ const Item: React.FC<Props> = ({name, icon, value, index}) => {
     const handleClick = () => {
         setItemSelected && setItemSelected(index);
         toggleModal && toggleModal(!isModelOpened);
+        console.log('Model is toggled on item click !')
     }
 
     const isSelected = itemSelected === index;
@@ -37,14 +38,14 @@ const Item: React.FC<Props> = ({name, icon, value, index}) => {
             "relative w-20 h-20 bg-black border border-zelda-darkGray cursor-pointer"
         )}
     >
-        {isSelected && <TriangleBox />}
+        {!isModelOpened && isSelected && <TriangleBox />}
         {icon && <img alt={name} src={icon} width="96" height="96"/>}
         {value && (
             <div className="z-0 bg-black -mx-1 -my-1 text-sm text-white absolute bottom-0 right-0 border border-zelda-darkGray px-2">
             {value}
             </div>)
         }
-        {isModelOpened && isSelected && <ModalItem />}
+        {isModelOpened && isSelected && <ItemModal />}
     </div>
     );
 };
